@@ -1,0 +1,404 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+.offers {
+  .container {
+    .carousel-arrows {
+      z-index: 5;
+      position: relative;
+
+      a {
+        position: absolute;
+        top: 240px;
+        cursor: pointer;
+
+        &.move-backward {
+          left: 11px;
+        }
+
+        &.move-forward {
+          right: 11px;
+        }
+      }
+    }
+
+    .carousel-items {
+      position: relative;
+      margin-bottom: 120px;
+
+      .carousel-item {
+        width: 1240px;
+        height: 500px;
+        box-sizing: border-box;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+        position: relative;
+        overflow: hidden;
+
+        .carousel-item-circle {
+          position: absolute;
+          top: -700px;
+          left: -700px;
+          width: 1400px;
+          height: 1400px;
+          background-color: $light-blue-text-color;
+          border-radius: 50%;
+          z-index: 2;
+        }
+
+        .carousel-item-info {
+          position: relative;
+          z-index: 33022;
+          padding: 100px 0 0 70px;
+
+          .carousel-item-info-label {
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: $blue-text-color;
+          }
+
+          .carousel-item-info-title {
+            max-width: 600px;
+            font-family: 'Lora', sans-serif;
+            font-weight: 400;
+            font-size: 50px;
+            line-height: 65px;
+            color: #FFFFFF;
+
+            span {
+              color: $blue-text-color;
+            }
+          }
+
+          .carousel-item-info-text {
+            width: 456px;
+            font-size: 24px;
+            line-height: 31px;
+            color: #FFFFFF;
+            margin: 20px 0 10px 0;
+          }
+
+          .carousel-item-info-button {
+            width: 163px;
+            margin-top: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.services {
+  .container {
+    .services-title {
+      @include title-lora-38;
+      margin-bottom: 40px;
+    }
+
+    .services-items {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 120px;
+
+      .services-item {
+        width: 290px;
+
+        .services-item-group-1 {
+          height: 447px;
+
+          .services-item-image {
+            width: 291px;
+            height: 291px;
+            background-position: center;
+            background-size: cover;
+          }
+
+          .services-item-title {
+            font-weight: 500;
+            font-size: 20px;
+            color: $blue-text-color;
+            margin: 15px 0 10px 0;
+          }
+
+          .services-item-text {
+            font-size: 14px;
+            line-height: 18px;
+            color: $base-text-color;
+          }
+        }
+
+        .services-item-group-2 {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .services-item-price {
+            font-weight: 600;
+            font-size: 20px;
+            color: $blue-text-color;
+          }
+
+          .button-400 {
+            width: 163px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about {
+  .container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 120px;
+    flex-shrink: 0;
+
+    .about-image {
+      min-width: 460px;
+      min-height: 453px;
+    }
+
+    .about-info {
+      padding-left: 68px;
+
+      .about-info-title {
+        @include title-lora-38;
+        margin-bottom: 20px;
+      }
+
+      .about-info-text {
+        width: 633px;
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 40px;
+        color: $dark-blue-text-color;
+
+        span {
+          font-weight: 500;
+        }
+      }
+
+      .about-info-adv-title {
+        font-family: 'Lora', sans-serif;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 34px;
+        color: $blue-text-color;
+        margin-bottom: 20px;
+      }
+
+      .about-info-adv-items {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+
+        .about-info-adv-item {
+          width: 316px;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          .about-info-adv-item-number {
+            min-width: 40px;
+            height: 40px;
+            background-color: $light-blue-text-color;
+            border-radius: 50%;
+            vertical-align: bottom;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            box-sizing: border-box;
+            font-family: 'Lora', sans-serif;
+            font-weight: 500;
+            font-size: 50px;
+            line-height: 55px;
+            color: $blue-text-color;
+          }
+
+          .about-info-adv-item-text {
+            font-size: 14px;
+            line-height: 18px;
+            color: $dark-blue-text-color;
+
+            span {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.popular-article {
+  margin-bottom: 120px;
+
+  .container {
+    .popular-article-title {
+      @include title-lora-38;
+      margin-bottom: 40px;
+    }
+
+    .popular-article-cards {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .popular-article-to-blog {
+      text-decoration: none;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 14px;
+      color: $blue-text-color;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 26px;
+      margin-top: 40px;
+
+      svg {
+        padding-top: 1px;
+      }
+    }
+  }
+}
+
+.reviews {
+  margin-bottom: 120px;
+
+  .container {
+    .reviews-title {
+      @include title-lora-38;
+      margin-bottom: 20px;
+    }
+
+    .reviews-carousel {
+      position: relative;
+
+      .review-item {
+        width: 396px;
+        height: 267px;
+        padding: 30px;
+        border: 2px solid $blue-text-color;
+        border-radius: 5px;
+        box-sizing: border-box;
+
+        .review-item-head {
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px;
+
+          .review-item-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-position: center;
+            background-size: cover;
+            margin-right: 26px;
+          }
+
+          .review-item-name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            color: $blue-text-color;
+          }
+        }
+
+        .reviews-item-text {
+          margin-top: 15px;
+          font-size: 16px;
+          line-height: 140%;
+          color: $base-text-color;
+        }
+      }
+
+      .reviews-arrows {
+        display: flex;
+
+        a {
+          top: calc(50% - 10px);
+          display: flex;
+          position: absolute;
+          cursor: pointer;
+
+          &.move-backward {
+            left: -20px;
+          }
+
+          &.move-forward {
+            right: -20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contacts {
+  margin-bottom: 120px;
+
+  .container {
+    display: flex;
+
+    iframe {
+      min-width: 607px;
+      height: 438px;
+    }
+
+    .contacts-info {
+      padding-left: 26px;
+
+      .contacts-info-title {
+        @include title-lora-38;
+        margin-bottom: 20px;
+      }
+
+      .contacts-info-subtitle {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 10px;
+        color: $blue-text-color;
+      }
+
+      .contacts-info-text {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 20px;
+        color: $base-text-color;
+
+        &.contacts-info-link {
+          text-decoration: none;
+          display: inline-block;
+          border-bottom: 1px solid transparent;
+
+          &:hover {
+            border-bottom: 1px solid $base-text-color;
+          }
+        }
+      }
+
+      .contacts-info-icons {
+        svg {
+          margin-right: 20px;
+          cursor: pointer;
+
+          &:hover {
+            scale: 1.2;
+          }
+        }
+      }
+    }
+  }
+}

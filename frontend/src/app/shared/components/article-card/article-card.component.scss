@@ -1,0 +1,67 @@
+@import "../../../../assets/styles/variables";
+
+.popular-article-card {
+  position: relative;
+  width: 292px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  cursor: pointer;
+  &:hover {
+    scale: 1.005;
+
+    .popular-article-card-more {
+      border-bottom: 1px solid $blue-text-color;
+    }
+  }
+
+  .popular-article-card-group {
+    margin-bottom: 20px;
+
+    .popular-article-card-image {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 291px;
+      height: 291px;
+      margin-bottom: 15px;
+    }
+
+    .popular-article-card-title {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 26px;
+      color: $blue-text-color;
+      margin-bottom: 20px;
+    }
+
+    .popular-article-card-text {
+      font-size: 14px;
+      line-height: 18px;
+      color: $base-text-color;
+    }
+  }
+
+  .popular-article-card-more {
+    font-size: 16px;
+    line-height: 21px;
+    color: $blue-text-color;
+    margin-bottom: 16px;
+    border-bottom: 1px solid transparent;
+  }
+
+  .popular-article-card-cat {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 5px;
+    padding: 10px 18px;
+    background-color: #FFFFFF;
+    color: $blue-text-color;
+    font-size: 11px;
+    line-height: 14px;
+    cursor: default;
+  }
+}

@@ -1,0 +1,248 @@
+@import "variables";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+//html {
+//  scroll-behavior: smooth;
+//}
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+}
+
+.button-500 {
+  text-align: center;
+  color: #FFFFFF;
+  background-color: $blue-text-color;
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 10px;
+
+  &:disabled {
+    background: gray;
+    cursor: not-allowed;
+  }
+}
+
+.button-400 {
+  text-align: center;
+  color: #FFFFFF;
+  background-color: $blue-text-color;
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  padding: 15px;
+
+  &:disabled {
+    background: gray;
+    cursor: not-allowed;
+  }
+}
+
+.header-actions-mat-menu {
+  padding: 0;
+}
+
+.cdk-overlay-connected-position-bounding-box {
+  padding-left: 80px;
+
+  .mat-menu-panel {
+    min-height: 55px;
+    min-width: 150px;
+
+    .mat-menu-content {
+      height: 100%;
+
+      &:not(:empty) {
+        padding: 0;
+      }
+
+      .mat-menu-item {
+        height: 100%;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+
+        a {
+          text-decoration: none;
+          color: $base-text-color;
+        }
+      }
+    }
+  }
+}
+
+.owl-theme {
+  position: relative;
+
+  .owl-nav.disabled + .owl-dots {
+    position: absolute;
+    top: 420px;
+    left: calc(50% - 36px);
+    margin-top: 50px;
+    z-index: 5;
+
+    .owl-dot {
+      span {
+        background-color: transparent;
+        border: 1px solid #FFFFFF;
+        width: 10px;
+        box-sizing: border-box;
+      }
+
+      &.active span {
+        background-color: #FFFFFF;
+      }
+    }
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, .7);
+  z-index: 100;
+
+  .popup-order {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 730px;
+    height: 500px;
+    box-sizing: border-box;
+    padding: 94px 10px 86px 10px;
+    border-radius: 3px;
+    background: rgb(255, 255, 255);
+
+
+    .popup-order-close {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      cursor: pointer;
+    }
+
+    .popup-order-title {
+      font-family: 'Lora', sans-serif;
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 49px;
+      color: $blue-text-color;
+      width: 445px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .popup-order-input {
+      .input {
+        width: 422px;
+        padding: 18px 20px;
+        border: 2px solid $blue-text-color;
+        border-radius: 3px;
+        box-sizing: border-box;
+        margin-bottom: 5px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+
+        &.input-blue {
+          color: $blue-text-color;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .invalid-feedback {
+      color: red;
+      margin-bottom: 10px;
+      font-size: 12px;
+      width: 420px;
+    }
+
+    .popup-order-text {
+      padding-bottom: 25px;
+    }
+
+    .popup-order-button {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.art {
+  .container {
+    .art-body {
+      .art-body-main {
+        .art-body-main-text {
+          margin: 0 0 60px 0;
+
+          h1 {
+            //margin: 0 0 15px 0;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 26px;
+            color: $blue-text-color;
+          }
+
+          h3 {
+            //margin: 15px 0 35px 0;
+            padding-top: 20px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 26px;
+            color: $blue-text-color;
+          }
+
+          p {
+            margin: 20px 0;
+            font-size: 14px;
+            line-height: 18px;
+            color: $base-text-color;
+
+            b {
+              font-weight: 500;
+            }
+          }
+
+          ol {
+            //margin: 5px 0;
+            font-size: 14px;
+            line-height: 18px;
+            color: $base-text-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mat-progress-spinner circle, .mat-spinner circle {
+  stroke: $blue-text-color;
+}

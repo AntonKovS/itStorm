@@ -1,0 +1,102 @@
+@import "../../../../assets/styles/variables";
+
+.art-comments-item {
+  width: 854px;
+  margin-bottom: 40px;
+
+  .art-comments-item-head {
+    margin-bottom: 15px;
+    display: flex;
+
+    .art-comments-item-head-img {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .art-comments-item-head-info {
+      margin-left: 26px;
+      font-weight: 600;
+
+      h6 {
+        font-size: 18px;
+        line-height: 24px;
+        color: $blue-text-color;
+        margin: 0 0 10px 0;
+      }
+
+      p {
+        line-height: 18px;
+        color: $gray-color-1;
+        margin: 0;
+      }
+    }
+  }
+
+  .art-comments-item-text {
+    word-break: break-all;
+    line-height: 20px;
+    margin-bottom: 30px;
+  }
+
+  .art-comments-item-icons {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .art-comments-item-icon-like, .art-comments-item-icon-dislike {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      svg {
+        display: flex;
+        align-items: center;
+        margin-left: 3px;
+
+        path {
+          stroke: $base-text-color;
+        }
+      }
+
+      &.active {
+        color: $blue-text-color;
+
+        svg path {
+          stroke: $blue-text-color;
+        }
+      }
+    }
+
+    .art-comments-item-icon-complaint {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      svg {
+        display: flex;
+        align-items: center;
+
+        path {
+          stroke: $base-text-color;
+        }
+      }
+
+      &.active svg path {
+        stroke: $blue-text-color;
+      }
+
+      &:active svg path {
+        stroke: red;
+      }
+    }
+  }
+}

@@ -1,0 +1,175 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+
+.art {
+  .container {
+    .art-heads {
+      line-height: 21px;
+      color: $light-blue-text-color;
+      margin: 80px 0 60px 0;
+
+      span {
+        font-weight: 500;
+        color: $blue-text-color;
+      }
+    }
+
+    .art-review {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      margin-bottom: 60px;
+
+      .art-review-block {
+        width: 607px;
+
+        .art-review-block-title {
+          @include title-lora-38;
+          margin-bottom: 40px;
+        }
+
+        .art-review-block-description {
+          font-size: 20px;
+          line-height: 26px;
+          color: $blue-text-color;
+        }
+      }
+
+      .art-review-image {
+        width: 527px;
+        height: 320px;
+        border-radius: 5px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+
+    .art-body {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+
+      .art-body-main {
+        width: 818px;
+
+        .art-social {
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          margin-bottom: 60px;
+
+          .art-social-text {
+            margin-right: 20px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            color: $blue-text-color;
+          }
+
+          .art-social-icons {
+            width: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            a {
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              &:hover {
+                scale: 1.2;
+              }
+            }
+          }
+        }
+
+        .art-comments {
+          margin-bottom: 120px;
+          font-size: 14px;
+          line-height: 19px;
+          color: $base-text-color;
+
+          .art-comments-title {
+            @include title-lora-38;
+            color: $blue-text-color;
+          }
+
+          .art-comments-first-message {
+            margin-top: 20px;
+          }
+
+          .art-comments-auth-message {
+            margin-top: 20px;
+
+            a {
+              color: $blue-text-color;
+              cursor: pointer;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+
+          .art-comments-form {
+            .art-comments-form-input {
+              margin-top: 40px;
+              margin-bottom: 20px;
+
+              textarea {
+                padding: 20px;
+                border-radius: 3px;
+                border: 2px solid $blue-text-color;
+                outline-color: $blue-text-color;
+              }
+            }
+
+            .art-comments-form-button {
+              width: 422px;
+            }
+          }
+
+          .art-comments-items {
+            display: flex;
+            flex-direction: column;
+            margin-top: 60px;
+
+            .art-comments-load-more {
+              width: 336px;
+              display: flex;
+              align-items: center;
+              font-weight: 500;
+              font-size: 20px;
+              line-height: 26px;
+              color: $blue-text-color;
+              cursor: pointer;
+              margin-top: 20px;
+
+              span {
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+
+      .art-body-related {
+        width: 292px;
+
+        .art-body-related-head {
+          @include title-lora-26;
+          margin: 60px 0 20px 0;
+        }
+
+        .art-body-related-arts {
+          display: flex;
+          flex-direction: column;
+          gap: 60px;
+        }
+      }
+    }
+  }
+}

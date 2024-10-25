@@ -1,0 +1,119 @@
+@import "variables";
+@import "mixins";
+
+.container {
+  display: flex;
+  align-items: center;
+
+  .auth-form {
+    padding: 120px 0;
+
+    .auth-title {
+      @include title-lora-36;
+      margin-bottom: 40px;
+    }
+
+    .auth-inputs {
+      padding-bottom: 30px;
+
+      .auth-input {
+        position: relative;
+
+        input {
+          width: 422px;
+          box-sizing: border-box;
+          margin-bottom: 5px;
+          padding: 18px 20px;
+          border: 2px solid $blue-text-color;
+          border-radius: 3px;
+          color: $base-text-color;
+        }
+
+        input:focus {
+          border: 2px solid $blue-text-color;
+        }
+
+        .glyphicon {
+          position: absolute;
+          top: calc(50% - 20px);
+          right: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 36px;
+          cursor: pointer;
+          margin-right: 10px;
+
+          svg {
+            width: 100%;
+            height: 100%;
+
+            path {
+              fill: $light-blue-text-color;
+            }
+          }
+        }
+      }
+
+      .auth-checkbox {
+        width: 422px;
+        color: $base-text-color;
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 18px;
+
+        input {
+          width: 14px;
+          height: 14px;
+          margin: 0 10px 0 0;
+          cursor: pointer;
+        }
+
+        span a {
+          text-decoration-line: underline;
+          cursor: pointer;
+          color: $blue-text-color;
+        }
+      }
+
+      .invalid-feedback {
+        color: red;
+        margin-bottom: 10px;
+        font-size: 12px;
+        width: 420px;
+      }
+    }
+
+    .auth-button {
+      button.button-400 {
+        width: 422px;
+      }
+    }
+
+    .auth-link {
+      margin-top: 10px;
+      font-size: 14px;
+      color: $dark-blue-text-color;
+
+      a {
+        text-decoration: none;
+        margin-left: 5px;
+        color: $blue-text-color;
+      }
+    }
+  }
+
+  .page-image {
+    max-width: 607px;
+    padding-left: 185px;
+  }
+}
+
+
+
+
+
+

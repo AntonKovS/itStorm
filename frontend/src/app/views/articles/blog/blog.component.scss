@@ -1,0 +1,183 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+
+.blog {
+  .container {
+    .blog-title {
+      @include title-lora-38;
+      margin-top: 80px;
+      margin-bottom: 40px;
+    }
+
+    .blog-filters {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      margin-bottom: 40px;
+
+      .blog-applied-filters {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: $blue-text-color;
+
+        .blog-applied-filter {
+          padding: 8px 11px 8px 20px;
+          border: 2px solid $blue-text-color;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          a {
+            width: 14px;
+            height: 14px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .blog-filter-options {
+        min-width: 257px;
+        box-sizing: border-box;
+        position: relative;
+        font-size: 16px;
+        cursor: pointer;
+
+
+        .blog-filter-options-head {
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          gap: 70px;
+          padding: 9px 0;
+          box-sizing: border-box;
+          color: $base-text-color;
+          border: 2px solid transparent;
+          width: 100%;
+
+          a {
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .blog-filter-options-body {
+          width: 100%;
+          box-sizing: border-box;
+          position: absolute;
+          display: none;
+          background-color: #FFFFFF;
+          border: 2px solid $light-blue-text-color;
+          border-radius: 0 0 5px 5px;
+          z-index: 3;
+
+          .blog-filter-options-body-item {
+            color: $gray-color-1;
+            padding: 12px 23px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &:hover {
+              color: #818181;
+              background-color: #f5f5f5;
+            }
+
+            &.checked {
+              color: $base-text-color;
+            }
+
+            span {
+              font-size: 24px;
+              line-height: 31px;
+            }
+          }
+        }
+
+        &.open {
+          .blog-filter-options-head {
+            padding: 9px 23px;
+            border: 2px solid $light-blue-text-color;
+            background-color: $light-blue-text-color;
+            border-radius: 5px 5px 0 0;
+            justify-content: space-between;
+          }
+
+          .blog-filter-options-body {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .blog-articles {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 54px;
+    }
+
+    .blog-pagination {
+      margin-bottom: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .pagination-arrow {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          rect {
+            fill: url(#pattern0_13199_648);
+          }
+        }
+
+        &.disabled {
+          cursor: unset;
+
+          svg {
+            rect {
+              fill: url(#pattern0_13199_636);
+            }
+          }
+        }
+      }
+
+      .pagination-pages {
+        margin-left: 40px;
+        margin-right: 40px;
+        display: flex;
+        align-items: center;
+          gap: 20px;
+
+        a.pagination-page {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          width: 32px;
+          cursor: pointer;
+          font-size: 20px;
+          line-height: 26px;
+          color: $base-text-color;
+
+          &.active {
+            color: $light-blue-text-color;
+          }
+
+          &.last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<div class="popular-article-card" *ngIf="article" [routerLink]="'/art/' + article.url">
+  <div class="popular-article-card-group">
+    <div class="popular-article-card-image"
+         style="background-image: url({{serverStaticPathArticlesImages + article.image}})"></div>
+    <div class="popular-article-card-title">{{article.title}}</div>
+    <div class="popular-article-card-text">{{article.description}}
+    </div>
+  </div>
+  <a class="popular-article-card-more">Читать дальше</a>
+  <div class="popular-article-card-cat">{{article.category}}</div>
+</div>

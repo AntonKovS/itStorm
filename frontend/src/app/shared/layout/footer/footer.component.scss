@@ -1,0 +1,111 @@
+@import "../../../../assets/styles/variables";
+
+footer.footer {
+  background-color: $light-blue-text-color;
+  color: $base-text-color;
+  padding: 40px 0 54px 0;
+
+  .container {
+    font-size: 16px;
+
+    .footer-nav {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+
+      a {
+        cursor: pointer;
+      }
+
+      .footer-menu {
+        ul {
+          display: flex;
+          align-items: center;
+          padding-left: 40px;
+
+          li {
+            list-style: none;
+            margin-right: 20px;
+
+            a {
+              color: $base-text-color;
+              cursor: pointer;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-info {
+      padding: 40px 0 6px 0;
+      display: flex;
+      align-items: start;
+
+      .footer-info-block {
+        padding-right: 60px;
+        line-height: 21px;
+
+        .footer-info-block-title {
+          font-weight: 500;
+          color: $blue-text-color;
+          padding-bottom: 10px;
+        }
+
+        .footer-info-block-text {
+          max-width: 253px;
+        }
+
+        .footer-info-block-phone {
+          text-decoration: none;
+          color: $base-text-color;
+          display: block;
+          border-bottom: 1px solid transparent;
+
+          &:hover {
+            border-bottom: 1px solid $base-text-color;
+          }
+        }
+
+        .footer-info-block-button {
+          width: 153px;
+          margin-top: 10px;
+        }
+
+        .footer-info-block-email {
+          font-size: 14px;
+          text-decoration: none;
+          color: $base-text-color;
+          border-bottom: 1px solid transparent;
+
+          &:hover {
+            border-bottom: 1px solid $base-text-color;
+          }
+        }
+
+        .footer-info-block-icons {
+          margin-top: 5px;
+          width: 96px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          a {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+              scale: 1.2;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-rights {
+      color: $blue-text-color;
+    }
+  }
+}

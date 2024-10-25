@@ -1,0 +1,17 @@
+section.layout-group {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+section.header-flex-layout {
+  flex: 0 0 auto;
+}
+
+section.content-flex-layout {
+  flex: 1 0 auto;
+}
+
+section.footer-flex-layout {
+  flex: 0 0 auto;
+}
